@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topup Panel Otomatis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h2>Topup & Buat Server Panel</h2>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Masukkan username panel" />
+
+    <label for="pilihRam">Pilih RAM</label>
+    <select id="pilihRam">
+      <option value="">-- Pilih RAM --</option>
+      <option value="1gb">1GB - Rp1.000</option>
+      <option value="2gb">2GB - Rp2.000</option>
+      <option value="3gb">3GB - Rp3.000</option>
+      <option value="4gb">4GB - Rp4.000</option>
+      <option value="5gb">5GB - Rp5.000</option>
+      <option value="6gb">6GB - Rp6.000</option>
+      <option value="7gb">7GB - Rp7.000</option>
+      <option value="8gb">8GB - Rp8.000</option>
+      <option value="9gb">9GB - Rp9.000</option>
+      <option value="10gb">10GB - Rp10.000</option>
+      <option value="unli">Unlimited - Rp15.000</option>
+    </select>
+
+    <button onclick="buatPembayaran()">Buat QRIS & Bayar</button>
+
+    <div id="infoPembayaran" class="qr-container hidden">
+      <h3>Scan QR untuk Bayar</h3>
+      <img id="qrImage" src="" alt="QRIS" />
+      <pre id="detailPembayaran"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
